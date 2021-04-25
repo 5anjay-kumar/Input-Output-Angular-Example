@@ -1,0 +1,20 @@
+<div class="mt-4 p-3 card shadow ">
+  <form [formGroup]="userForm" (ngSubmit)="add()">
+    <div class="row">
+      <div class="col">
+        <input type="text" formControlName="songTitle" class="form-control" placeholder="Song Title">
+      </div>
+      <div class="col">
+        <input type="text" formControlName="singer" class="form-control" placeholder="Singer">
+      </div>
+      <div class="col">
+        <input type="number" formControlName="views" class="form-control" placeholder="Views">
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary"> {{isNew ? 'Submit' : 'Update'}} </button>
+      </div>
+    </div>
+  </form>
+</div>

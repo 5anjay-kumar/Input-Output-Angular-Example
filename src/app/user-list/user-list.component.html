@@ -1,0 +1,24 @@
+<app-add-user (addUser)="getUser($event)" [user]="user" (isTableShow)="showTable($event)"></app-add-user>
+<table class="table mt-3 shadow-lg rounded" *ngIf="isTableShow">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Song Title</th>
+      <th scope="col">Singer</th>
+      <th scope="col">Views</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList index as i" class="animate__animated animate__slideInLeft">
+      <th scope="row">{{i+1}}</th>
+      <td>{{user.songTitle}}</td>
+      <td>{{user.singer}}</td>
+      <td>{{user.views}}</td>
+      <td>
+        <button class="btn btn-info btn-sm" (click)="edit(user)">Edit</button>
+        <button class="btn btn-danger btn-sm ml-2" (click)="delete(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
