@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
+## Description
+
+In this project there is a module Listing have two components one is User-List and other is Add-User
+In User-List is Parent component & Add-User is Child
+Child send the data to parent and then parent receive
+For the Update Parent send the data to child then update the data and send to the parent
+
+## Project Commands
+
+run `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
